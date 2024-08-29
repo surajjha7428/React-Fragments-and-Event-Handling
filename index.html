@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>React-Fragment</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // Your JSX code here
+
+        //   Button Functionality
+
+        const alertFunc = () => {
+            alert("Hello");
+        };
+
+
+        const element = (
+            // React Fragment Wrapper
+            <>
+                <p style={{ textAlign: "center", fontSeize: "30px" }}>React is a javascript library</p>
+                <div className="main">
+                    <p style={{ textAlign: "center", fontSeize: "30px" }}>Click the below button to alert 'Hello</p>
+                    <button style={{ width: "100px", height: "30px", color: "white", backgroundColor: "green", marginLeft: "750px" }} onClick={alertFunc}>Alert Hello</button>
+                </div>
+            </>
+        )
+
+        //  Rendring the element to the DOM
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(element);
+
+    </script>
+</body>
+
+</html>
